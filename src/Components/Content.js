@@ -10,10 +10,10 @@ const Content = ({ styles }) => {
   const posts = Array(20).fill(dummyPost);
 
   const contentStyle = {
-    paddingTop: styles.topBarHeight + 20,
+    paddingTop: styles.showSidebar ? 20 : styles.topBarHeight + 20,
     paddingRight: 20,
-    paddingBottom: styles.footerMenuHeight + 20,
-    paddingLeft: 20
+    paddingBottom: styles.showSidebar ? 20 : styles.footerMenuHeight + 20,
+    paddingLeft: styles.showSidebar ? styles.sidebarWidth + 20 : 20
   };
 
   return (

@@ -25,7 +25,15 @@ const FooterMenu = ({ menuItems, styles }) => {
               flex: 1
             }}
           >
-            <span style={{ fontSize: 20 }}>{item.icon}</span>
+            <span
+              style={{
+                fontSize: 20,
+                marginRight: styles.showFooterMenuText ? 5 : 0
+              }}
+            >
+              {item.icon}
+            </span>
+            {styles.showFooterMenuText && item.text}
           </div>
         );
       })}
