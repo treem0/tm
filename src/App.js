@@ -48,16 +48,16 @@ class App extends Component {
     };
 
     const menuItems = [
-      { icon: `😀`, text: "Item 1" },
-      { icon: `😉`, text: "Item 2" },
-      { icon: `😎`, text: "Item 3" },
-      { icon: `🤔`, text: "Item 4" },
-      { icon: `😛`, text: "Item 5" }
+      { icon: `<>`, text: "Home" },
+      { icon: `<>`, text: "About" },
+      { icon: `<>`, text: "Skills" },
+      { icon: `<>`, text: "Projects" },
+      { icon: `<>`, text: "Contact" }
     ];
 
     if(styles.showSidebar) {
-      menuItems.push({ icon: `😺️`, text: "Profile" });
-      menuItems.push({ icon: `⚙`, text: "Settings" });
+      menuItems.push({ icon: `😺️`, text: "Github" });
+      menuItems.push({ icon: `⚙`, text: "LinkedIn" });
     }
 
     return (
