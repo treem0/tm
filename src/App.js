@@ -56,8 +56,8 @@ class App extends Component {
     ];
 
     if(styles.showSidebar) {
-      menuItems.push({ icon: <img src="https://img.icons8.com/material-rounded/48/000000/github.png" />, text: "Github" });
-      menuItems.push({ icon: <img src="https://img.icons8.com/android/48/000000/linkedin.png" />, text: "LinkedIn" });
+      menuItems.push({ icon: <a href="https://github.com/treem0"> <img src="https://img.icons8.com/material-rounded/48/000000/github.png" alt="Github" /> </a>, text: "Github" });
+      menuItems.push({ icon: <img src="https://img.icons8.com/android/48/000000/linkedin.png" alt="LinkedIn" />, text: "LinkedIn" });
     }
 
     return (
@@ -68,18 +68,20 @@ class App extends Component {
           position: "relative"
         }}
       >
-        {styles.showSidebar ? (
-          <Sidebar menuItems={menuItems} styles={styles} />
-        ) : (
-            <TopBar styles={styles} />
-          )}
+        {
+          styles.showSidebar ? (
+            <Sidebar menuItems={menuItems} styles={styles} />
+          ) : (
+              <TopBar styles={styles} />
+            )
+        }
 
-        <Content styles={styles} />
+        < Content styles={styles} />
 
         {!styles.showSidebar && (
           <FooterMenu menuItems={menuItems} styles={styles} />
         )}
-      </div>
+      </div >
     );
   }
 }

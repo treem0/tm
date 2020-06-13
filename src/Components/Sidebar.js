@@ -22,13 +22,6 @@ const Sidebar = ({ menuItems, styles }) => {
     marginRight: styles.sidebarCollapsed ? 0 : 10
   };
 
-  const logoStyle = {
-    textAlign: "center",
-    color: styles.white(),
-    fontSize: 34,
-    marginBottom: 60,
-    fontWeight: "bold"
-  };
 
   return (
     <div style={sidebarStyle}>
