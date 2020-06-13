@@ -39,7 +39,7 @@ class App extends Component {
     const styles = {
       white: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
       black: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-      topBarHeight: 40,
+      topBarHeight: 90,
       footerMenuHeight: 50,
       showFooterMenuText: windowWidth > 500,
       showSidebar: windowWidth > 768,
@@ -56,8 +56,8 @@ class App extends Component {
     ];
 
     if(styles.showSidebar) {
-      menuItems.push({ icon: `😺️`, text: "Github" });
-      menuItems.push({ icon: `⚙`, text: "LinkedIn" });
+      menuItems.push({ icon: <img src="https://img.icons8.com/material-rounded/48/000000/github.png" />, text: "Github" });
+      menuItems.push({ icon: <img src="https://img.icons8.com/android/48/000000/linkedin.png" />, text: "LinkedIn" });
     }
 
     return (
