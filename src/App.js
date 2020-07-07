@@ -48,7 +48,7 @@ class App extends Component {
     };
 
     const menuItems = [
-      { icon: `<>`, text: "Home" },
+      { icon: <img src='/assets/home.png' alt='home' />, text: "Home" },
       { icon: `<>`, text: "About" },
       { icon: `<>`, text: "Skills" },
       { icon: `<>`, text: "Projects" },
