@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router';
 import TopBar from "./Components/TopBar";
 import FooterMenu from "./Components/FooterMenu";
 import Content from "./Components/Content";
@@ -48,8 +49,8 @@ class App extends Component {
     };
 
     const menuItems = [
-      { icon: <img src='/assets/home.png' alt='home' />, text: "Home" },
-      { icon: `<>`, text: "About" },
+      { icon: <Link to='/src/Components/Content.js'> <img src="/assets/home.png" alt="home" /> </Link>, text: "Home" },
+      { icon: <a href="/src/Components/About.js"> <img src="/assets/about.svg" alt="About" /> </a>, text: "About" },
       { icon: `<>`, text: "Skills" },
       { icon: `<>`, text: "Projects" },
       { icon: `<>`, text: "Contact" }

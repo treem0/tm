@@ -2,9 +2,9 @@ import React from "react";
 
 const Content = ({ styles }) => {
   const dummyPost = {
-    title: `Hi! I'm Travis Molter,`,
+    title: `Travis Molter,`,
     summary:
-      "a Software Developer"
+      "A Software Developer that loves the outdoors!"
   };
 
   const posts = Array(1).fill(dummyPost);
