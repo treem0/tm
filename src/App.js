@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Link } from 'react-router';
+import {
+  BrowserRouter as Router,
+  Link
+ } from 'react-router-dom';
 import TopBar from "./Components/TopBar";
 import FooterMenu from "./Components/FooterMenu";
 import Content from "./Components/Content";
@@ -49,8 +52,8 @@ class App extends Component {
     };
 
     const menuItems = [
-      { icon: <Link to='/src/Components/Content.js'> <img src="/assets/home.png" alt="home" /> </Link>, text: "Home" },
-      { icon: <a href="/src/Components/About.js"> <img src="/assets/about.svg" alt="About" /> </a>, text: "About" },
+      { icon: <a href="/src/Components/Content"> <img src="/assets/home.png" alt="home" /> </a>, text: "Home" },
+      { icon: <Link to="/src/Components/About.js" > <img src="/assets/about.svg" alt="About" /> </Link>, text: "About" },
       { icon: `<>`, text: "Skills" },
       { icon: `<>`, text: "Projects" },
       { icon: `<>`, text: "Contact" }
@@ -62,27 +65,29 @@ class App extends Component {
     }
 
     return (
-      <div
-        style={{
-          backgroundColor: styles.black(0.05),
-          minHeight: "100vh",
-          position: "relative"
-        }}
-      >
-        {
-          styles.showSidebar ? (
-            <Sidebar menuItems={menuItems} styles={styles} />
-          ) : (
-              <TopBar styles={styles} />
-            )
-        }
+      <Router>
+        <div
+          style={{
+            backgroundColor: styles.black(0.05),
+            minHeight: "100vh",
+            position: "relative"
+          }}
+        >
+          {
+            styles.showSidebar ? (
+              <Sidebar menuItems={menuItems} styles={styles} />
+            ) : (
+                <TopBar styles={styles} />
+              )
+          }
 
-        < Content styles={styles} />
+          < Content styles={styles} />
 
-        {!styles.showSidebar && (
-          <FooterMenu menuItems={menuItems} styles={styles} />
-        )}
-      </div >
+          {!styles.showSidebar && (
+            <FooterMenu menuItems={menuItems} styles={styles} />
+          )}
+        </div >
+      </Router>
     );
   }
 }
