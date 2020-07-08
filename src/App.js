@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Link
- } from 'react-router-dom';
+} from 'react-router-dom';
 import TopBar from "./Components/TopBar";
 import FooterMenu from "./Components/FooterMenu";
 import Content from "./Components/Content";
@@ -52,7 +52,7 @@ class App extends Component {
     };
 
     const menuItems = [
-      { icon: <a href="/src/Components/Content"> <img src="/assets/home.png" alt="home" /> </a>, text: "Home" },
+      { icon: <Link to="/src/Components/Content"> <img src="/assets/home.png" alt="home" /> </Link>, text: "Home" },
       { icon: <Link to="/src/Components/About.js" > <img src="/assets/about.svg" alt="About" /> </Link>, text: "About" },
       { icon: `<>`, text: "Skills" },
       { icon: `<>`, text: "Projects" },
@@ -87,6 +87,7 @@ class App extends Component {
             <FooterMenu menuItems={menuItems} styles={styles} />
           )}
         </div >
+
       </Router>
     );
   }
